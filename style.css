@@ -121,6 +121,19 @@ div.current_degree_div {
 .current_temp_symbol {
   text-align: center;
 }
+
+/* div with all the week's weather */
+.days_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.degree_fah_box {
+  font-size: 8px;
+  padding-right: 5px;
+}
+
 /* footer */
 footer {
   font-size: 6px;
