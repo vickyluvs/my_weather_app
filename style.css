@@ -30,3 +30,35 @@ input {
   color: #807bf0;
   box-shadow: 10px 10px 20px #807bf0;
 }
+
+#search-btn {
+  background-color: rgb(107, 99, 255);
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  font-size: 10px;
+  padding: 5px 15px 5px 15px;
+  cursor: pointer;
+}
+
+#search-btn:hover {
+  background-color: #807bf0;
+}
+
+#search-bar {
+  padding: 5px 10px 5px 10px;
+  border-radius: 5px;
+  border: 0;
+  text-align: center;
+}
+
+::placeholder {
+  font-size: 10px;
+  color: rgb(107, 99, 255);
+}
+
+input[type="text"] {
+  font-size: 10px;
+  color: rgb(107, 99, 255);
+  font-weight: 200;
+}
