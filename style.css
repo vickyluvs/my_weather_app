@@ -62,3 +62,15 @@ input[type="text"] {
   color: rgb(107, 99, 255);
   font-weight: 200;
 }
+/* div with the current city weather information */
+.current_city_weather {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.time,
+.week_day {
+  font-size: 12px;
+}
