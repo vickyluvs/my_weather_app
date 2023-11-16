@@ -5,11 +5,12 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
+  font-size: 18px;
 }
 
 .container {
   margin: 50px auto;
-  width: 400px;
+  width: 500px;
   padding: 20px 20px 0 20px;
   background-color: rgb(142, 164, 231, 0.6);
   border: 5px solid rgb(107, 99, 255);
@@ -23,6 +24,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 input {
