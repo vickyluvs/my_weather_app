@@ -1,3 +1,6 @@
+html {
+  font-size: 16px;
+}
 body {
   margin: 0 auto;
   font-family: "Dosis", sans-serif;
@@ -8,6 +11,10 @@ body {
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: cener;
+  align-self: center;
   margin: 50px auto;
   width: 400px;
   height: auto;
@@ -76,7 +83,7 @@ input[type="text"] {
 .current_city_weather {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -89,9 +96,13 @@ input[type="text"] {
 .greeting_box {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   font-size: 12px;
+}
+
+#main-city {
+  font-size: 32px;
 }
 
 .greeting {
