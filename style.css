@@ -74,6 +74,53 @@ input[type="text"] {
 .week_day {
   font-size: 12px;
 }
+
+/* css for the language, city and greeting */
+.greeting_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+
+.greeting {
+  display: flex;
+  flex-direction: column;
+  font-size: 8px;
+  margin-left: 20px;
+}
+
+.bold {
+  font-weight: bold;
+  color: white;
+}
+
+.condition {
+  font-size: 10px;
+}
+
+.humidity,
+.wind {
+  color: rgb(107, 99, 255);
+}
+
+div.current_degree_div {
+  margin-bottom: 50px;
+}
+
+.current_degree {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.weather_info {
+  margin-bottom: 10px;
+}
+
+.current_temp_symbol {
+  text-align: center;
+}
 /* footer */
 footer {
   font-size: 6px;
