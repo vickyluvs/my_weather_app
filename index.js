@@ -11,7 +11,7 @@ function showGreeting(response) {
   sentence.innerHTML = " ";
 
   //displaying the new greeting
-  sentence.innerHTML = `${greeting} means Hello in ${language}`;
+  sentence.innerHTML = `${greeting} means Hello in ${language} 👋🏽`;
 }
 // axios fetching the url and data
 let url = `https://www.greetingsapi.com/random`;

@@ -90,6 +90,15 @@ input[type="text"] {
   margin-left: 20px;
 }
 
+#sentence {
+  width: 100px;
+  height: 20px;
+  background-color: rgb(142, 164, 231, 0.6);
+  text-align: center;
+  border-radius: 2px;
+  padding: 3px 1px 3px 1px;
+}
+
 .bold {
   font-weight: bold;
   color: white;
