@@ -31,8 +31,7 @@ function showTime() {
   //statement to show AM
   if (minutes <= 10) {
     time.innerHTML = `${hours}:0${minutes}`;
-  }
-  if (hours <= 11) {
+  } else if (hours <= 11) {
     time.innerHTML = `${hours}:${minutes}AM`;
   } else {
     time.innerHTML = `${hours}:${minutes}`;
