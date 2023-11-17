@@ -10,6 +10,7 @@ body {
 .container {
   margin: 50px auto;
   width: 200px;
+  height: 67vh;
   padding: 20px 20px 0 20px;
   background-color: rgb(142, 164, 231, 0.6);
   border: 5px solid rgb(107, 99, 255);
@@ -68,35 +69,40 @@ input[type="text"] {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
+  height: 100px;
+  margin-top: 10px;
 }
 
-.time,
-.week_day {
+.precipe {
+  text-align: left;
+  font-size: 10px;
+  margin-bottom: 43px;
+}
+
+.current_degree_div {
+  margin-left: 40px;
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.time {
   font-size: 12px;
 }
 /* css for the language, city and greeting */
 .greeting_box {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 12px;
+  text-align: center;
+  font-size: 18px;
 }
 
 .greeting {
-  display: flex;
-  flex-direction: column;
   font-size: 8px;
-  margin-left: 20px;
-}
-
-#sentence {
-  width: 100px;
+  width: 200px;
   height: 20px;
-  background-color: rgb(142, 164, 231, 0.6);
-  text-align: center;
   border-radius: 2px;
-  padding: 3px 1px 3px 1px;
+  text-align: center;
 }
 
 .bold {
@@ -113,15 +119,6 @@ input[type="text"] {
   color: rgb(107, 99, 255);
 }
 
-div.current_degree_div {
-  margin-bottom: 50px;
-}
-
-.current_degree {
-  font-size: 35px;
-  font-weight: bold;
-}
-
 .weather_info {
   margin-bottom: 10px;
 }
@@ -134,11 +131,20 @@ div.current_degree_div {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  margin-bottom: 50px;
+}
+
+.days_of_week {
+  text-align: center;
+  background-color: rgb(142, 164, 231, 0.6);
+  border-radius: 2px;
+  padding: 5px 0 10px 0;
+  margin: 5px 1px 0 2px;
+  font-size: 12px;
 }
 
 .degree_fah_box {
-  font-size: 8px;
-  padding-right: 5px;
+  padding: 5px;
 }
 
 /* footer */
