@@ -70,3 +70,11 @@ function showTime() {
   weekDay.innerHTML = `${day} ${month} ${date}`;
 }
 showTime();
+
+// function to capture user search value
+function showCity() {
+  // search input
+  let searchBox = document.getElementById("search-bar").value;
+  let mainCity = document.getElementById("main-city");
+  mainCity.innerHTML = searchBox;
+}
