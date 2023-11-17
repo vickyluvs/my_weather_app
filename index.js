@@ -71,7 +71,7 @@ function showTime() {
 showTime();
 
 // function to capture user search value
-function showCity(event) {
+function showCity() {
   // search input
   let searchBox = document.getElementById("search-bar");
   let city = searchBox.value;
@@ -95,8 +95,8 @@ function showTempInfo(response) {
   mainCity.innerHTML = response.data.city;
 
   // weather description
-  let description = (document.querySelector(".description").innerHTML =
-    response.data.condition.description);
+  document.querySelector(".description").innerHTML =
+    response.data.condition.description;
   //weather humidity
   let humidity = document.querySelector(".humidity");
   let humidTemp = response.data.temperature.humidity;
