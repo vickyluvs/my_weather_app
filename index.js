@@ -71,7 +71,7 @@ function showTime() {
 showTime();
 
 // function to capture user search value
-function showCity() {
+function showCity(event) {
   // search input
   let searchBox = document.getElementById("search-bar");
   let city = searchBox.value;
@@ -81,11 +81,11 @@ function showCity() {
   let weatherUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
 
   // calling showTemperature function
-  axios.get(weatherUrl).then(showTemperature);
+  axios.get(weatherUrl).then(showTempInfo);
 }
 
 //function to display current weather temperature to user
-function showTemperature(response) {
+function showTempInfo(response) {
   // current weather
   let currentCityDegree = document.getElementById("degree");
   currentCityDegree.innerHTML = Math.round(response.data.temperature.current);
@@ -94,5 +94,17 @@ function showTemperature(response) {
   let mainCity = document.getElementById("main-city");
   mainCity.innerHTML = response.data.city;
 
-  console.log(response.data);
+  // weather description
+  let description = (document.querySelector(".description").innerHTML =
+    response.data.condition.description);
+  //weather humidity
+  let humidity = document.querySelector(".humidity");
+  let humidTemp = response.data.temperature.humidity;
+  humidity.innerHTML = `${humidTemp}%`;
+
+  // wind speed
+  let wind = document.querySelector(".wind");
+  let windSpeed = response.data.wind.speed;
+  console.log(windSpeed);
+  wind.innerHTML = `${windSpeed}km/h`;
 }
