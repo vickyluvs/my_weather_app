@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css" />
-     <!-- Google font link -->
+    <!-- Google font link -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,15 +15,13 @@
   </head>
   <body>
     <main class="container">
-      <!-- search bar and button -->
       <div class="input_group">
         <form>
           <input
             type="text"
             class="search"
             id="search-bar"
-            placeholder="Enter a city.."
-            value=""
+            placeholder="Enter a city.. required"
           />
           <input
             type="button"
@@ -54,28 +52,25 @@
           <div class="weather_info">
             <strong class="week_day">Saturday</strong><br />
             <strong class="time">3:00</strong><br />
-          
           </div>
 
           <div class="weather_info">
-              <span class="condition description">Rainy</span><br/>
+            <span class="condition description">Rainy</span><br />
             <span class="condition humid">Humidity:</span>
             <strong class="condition humidity humid">87%</strong><br />
             <span class="condition">Wind:</span>
             <strong class="condition wind">7.2km/h</strong>
           </div>
         </div>
-
         <!-- div for the current weather information -->
         <div class="current_degree_div">
-            <span id="degree" class="current_degree">80</span>
-            <span class="current_degree">&degF</span>
-            <span class="current_temp_symbol current_degree">⛈</span>
-          </h2>
+          <span id="degree" class="current_degree">80</span>
+          <span class="current_degree">&deg;F</span>
+          <span class="current_temp_symbol current_degree">⛈</span>
         </div>
       </div>
 
-       <!-- list items for the weekly weather information -->
+      <!-- list items for the weekly weather information -->
       <div class="days_container">
         <div class="days_of_week">
           <strong class="week_day">Sun</strong><br />
@@ -90,7 +85,7 @@
 
         <div class="days_of_week">
           <strong class="week_day">Mon</strong><br />
-          <small class="symbol">⛈</small><br/>
+          <small class="symbol">⛈</small><br />
           <div class="degree_fah_box">
             <span class="degree">85</span>
             <span class="fah">&deg;F </span>
@@ -143,23 +138,24 @@
           </div>
         </div>
       </div>
-      <hr>
+
       <footer>
         <p>
           This app was coded by
-          <a href="https://github.com/vickyluvs" target="_blank"
-            >Victoria Smith</a
-          >
-          and is open-sourced on
-          <a href="https://github.com/vickyluvs/my_weather_app" target="_blank"
-            >Github</a
-          >
-          and hosted on
+          <a href="#" target="_blank">Victoria Smith</a> and is on
+          <a href="#" target="_blank">Github</a> and hosted on
           <a href="#" target="_blank">Netlify</a>
         </p>
-        <p id="attribute">Image by <a href="https://www.freepik.com/free-vector/flat-design-monsoon-season-clouds-illustration_26922266.htm">Freepik</a></p>
+        <p id="attribute">
+          Image by
+          <a
+            href="https://www.freepik.com/free-vector/flat-design-monsoon-season-clouds-illustration_26922266.htm"
+            >Freepik</a
+          >
+        </p>
       </footer>
     </main>
-    <script src="index.js"></script>
+
+    <script src="script.js"></script>
   </body>
 </html>

@@ -1,6 +1,3 @@
-html {
-  font-size: 16px;
-}
 body {
   margin: 0 auto;
   font-family: "Dosis", sans-serif;
@@ -9,15 +6,10 @@ body {
   background-size: cover;
   width: 100%;
 }
-
+/* main container */
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: cener;
-  align-self: center;
   margin: 50px auto;
-  width: 400px;
-  height: auto;
+  width: 200px;
   padding: 20px 20px 0 20px;
   background-color: rgb(142, 164, 231, 0.6);
   border: 5px solid rgb(107, 99, 255);
@@ -27,25 +19,16 @@ body {
 }
 
 /* search bar  and button*/
-/* .input_group {
+.input_group {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-} */
-
-form {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
 }
 
 input {
   background: #d8e6ff;
   color: #807bf0;
   box-shadow: 10px 10px 20px #807bf0;
-  margin: 5px;
 }
 
 #search-btn {
@@ -54,7 +37,7 @@ input {
   border-radius: 5px;
   color: white;
   font-size: 10px;
-  padding: 5px 20px 5px 20px;
+  padding: 5px 15px 5px 15px;
   cursor: pointer;
 }
 
@@ -63,14 +46,14 @@ input {
 }
 
 #search-bar {
-  padding: 5px 40px 5px 40px;
+  padding: 5px 10px 5px 10px;
   border-radius: 5px;
   border: 0;
   text-align: center;
 }
 
 ::placeholder {
-  font-size: 12px;
+  font-size: 10px;
   color: rgb(107, 99, 255);
 }
 
@@ -83,7 +66,7 @@ input[type="text"] {
 .current_city_weather {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -91,18 +74,13 @@ input[type="text"] {
 .week_day {
   font-size: 12px;
 }
-
 /* css for the language, city and greeting */
 .greeting_box {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   font-size: 12px;
-}
-
-#main-city {
-  font-size: 32px;
 }
 
 .greeting {
@@ -131,7 +109,7 @@ div.current_degree_div {
 }
 
 .current_degree {
-  font-size: 45px;
+  font-size: 35px;
   font-weight: bold;
 }
 
@@ -142,7 +120,6 @@ div.current_degree_div {
 .current_temp_symbol {
   text-align: center;
 }
-
 /* div with all the week's weather */
 .days_container {
   display: flex;
