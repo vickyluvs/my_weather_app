@@ -33,7 +33,6 @@ input {
 }
 
 #search-btn {
-  background-color: rgb(107, 99, 255);
   border: 0;
   border-radius: 5px;
   color: white;
@@ -95,6 +94,12 @@ h1 {
   width: 150px;
 }
 
+img {
+  width: 60px;
+  /* background-color: aqua; */
+  margin-top: -15px;
+}
+
 .time {
   font-size: 12px;
 }
@@ -102,6 +107,7 @@ h1 {
 .greeting_box {
   text-align: center;
   font-size: 18px;
+  /* background-color: aquamarine; */
 }
 
 .greeting {
@@ -110,6 +116,7 @@ h1 {
   height: 20px;
   border-radius: 2px;
   text-align: center;
+  /* background-color: green; */
 }
 
 .bold {
@@ -130,9 +137,6 @@ h1 {
   margin-bottom: 10px;
 }
 
-.current_temp_symbol {
-  text-align: center;
-}
 /* div with all the week's weather */
 .days_container {
   display: flex;
