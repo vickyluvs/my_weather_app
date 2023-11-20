@@ -58,7 +58,7 @@ function showTimeAndDate(date) {
   if (minutes < 10) {
     time = `${hours}:0${minutes}`;
   } else if (hours <= 11) {
-    time = `${hours}:${minutes}AM`;
+    time = `${hours}:${minutes} AM`;
   }
   return `${day} ${month} ${dateName} ${time} `;
 }
