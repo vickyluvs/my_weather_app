@@ -20,22 +20,9 @@ setInterval(() => {
 }, 3000);
 
 // function to show current month, day and time
-function showTime() {
-  let time = document.querySelector(".time");
-
-  // setting time -- hours and minutes
-  let d = new Date();
-  let hours = d.getHours();
-  let minutes = d.getMinutes();
-
-  //statement to show AM
-  if (minutes <= 10) {
-    time.innerHTML = `${hours}:0${minutes}`;
-  } else if (hours <= 11) {
-    time.innerHTML = `${hours}:${minutes}AM`;
-  } else {
-    time.innerHTML = `${hours}:${minutes}`;
-  }
+function showTimeAndDate(date) {
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
 
   let daysOfTheWeek = [
     "Sunday",
@@ -46,7 +33,7 @@ function showTime() {
     "Friday",
     "Saturday",
   ];
-  day = daysOfTheWeek[d.getDay()];
+  let day = daysOfTheWeek[date.getDay()];
 
   let months = [
     "January",
@@ -62,13 +49,19 @@ function showTime() {
     "November",
     "December",
   ];
-  let month = months[d.getMonth()];
-  let date = d.getDate();
-  let weekDay = document.querySelector(".week_day");
+  let month = months[date.getMonth()];
+  // let date = new Date();
 
-  weekDay.innerHTML = `${day} ${month} ${date}`;
+  let dateName = date.getDate();
+  let time = `${hours}:${minutes}`;
+
+  if (minutes < 10) {
+    time = `${hours}:0${minutes}`;
+  } else if (hours <= 11) {
+    time = `${hours}:${minutes}AM`;
+  }
+  return `${day} ${month} ${dateName} ${time} `;
 }
-showTime();
 
 // function to capture user search value
 function showCity() {
@@ -105,6 +98,10 @@ function showTempInfo(response) {
   // wind speed
   let wind = document.querySelector(".wind");
   let windSpeed = response.data.wind.speed;
-  console.log(windSpeed);
-  wind.innerHTML = `${windSpeed}km/h`;
+  wind.innerHTML = `${windSpeed}m/h`;
+
+  // showing date and time
+  let date = new Date(response.data.time * 1000);
+  let timeElement = document.querySelector(".time");
+  timeElement.innerHTML = showTimeAndDate(date);
 }
