@@ -106,5 +106,5 @@ function showTempInfo(response) {
   timeElement.innerHTML = showTimeAndDate(date);
 
   let iconImage = document.getElementById("icon");
-  iconImage.innerHTML = `<img src="${response.data.condition.icon_url}" class="current_temp_symbol" />`;
+  iconImage.innerHTML = `<img src="${response.data.condition.icon_url}"/>`;
 }

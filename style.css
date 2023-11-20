@@ -9,7 +9,7 @@ body {
 /* main container */
 .container {
   margin: 50px auto;
-  width: 200px;
+  max-width: 400px;
   height: auto;
   padding: 20px 20px 0 20px;
   background-color: rgb(142, 164, 231, 0.6);
@@ -23,13 +23,14 @@ body {
 .input_group {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 input {
   background: #d8e6ff;
   color: #807bf0;
   box-shadow: 10px 10px 20px #807bf0;
+  margin-left: 10px;
 }
 
 #search-btn {
@@ -39,10 +40,11 @@ input {
   font-size: 10px;
   padding: 5px 15px 5px 15px;
   cursor: pointer;
+  background-color: #807bf0;
 }
 
 #search-btn:hover {
-  background-color: #807bf0;
+  background-color: #d8e6ff;
 }
 
 #search-bar {
@@ -69,10 +71,11 @@ h1 {
 .current_city_weather {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   height: 100px;
   margin-top: 10px;
+  margin-left: 30px;
   /* background-color: purple; */
 }
 
@@ -111,12 +114,13 @@ img {
 }
 
 .greeting {
-  font-size: 8px;
+  font-size: 10px;
   width: 200px;
   height: 20px;
   border-radius: 2px;
   text-align: center;
   /* background-color: green; */
+  margin: 0 auto;
 }
 
 .bold {
@@ -145,13 +149,14 @@ img {
   margin-bottom: 50px;
 }
 
-.days_of_week {
+.days_of_week_div {
   text-align: center;
-  background-color: rgb(142, 164, 231, 0.6);
+  /* background-color: rgb(142, 164, 231, 0.6); */
   border-radius: 2px;
   padding: 5px 0 10px 0;
   margin: 5px 1px 0 2px;
-  font-size: 12px;
+  font-size: 10px;
+  /* background-color: red; */
 }
 
 .degree_fah_box {
