@@ -75,7 +75,6 @@ function searchCity(city) {
 function handleSearchSubmit(event) {
   event.preventDefault();
   let searchInput = document.getElementById("search-form-input");
-
   searchCity(searchInput.value);
 }
 // the form element
@@ -106,8 +105,9 @@ function showTempInfo(response) {
   wind.innerHTML = `${windSpeed}m/h`;
 
   // showing date and time
-  let date = new Date(response.data.time * 1000);
   let timeElement = document.querySelector(".time");
+  let date = new Date(response.data.time * 1000);
+
   timeElement.innerHTML = showTimeAndDate(date);
 
   let iconImage = document.getElementById("icon");
