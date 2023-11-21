@@ -24,6 +24,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  width: 100%;
 }
 
 input {
@@ -52,6 +53,7 @@ input {
   border-radius: 5px;
   border: 0;
   text-align: center;
+  width: 200px;
 }
 
 ::placeholder {
@@ -172,4 +174,20 @@ footer {
 
 #attribute {
   font-size: 4px;
+}
+
+@media screen and (max-width: 400px) {
+  #search-bar {
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    border: 0;
+    text-align: center;
+    width: 150px;
+  }
+
+  #search-btn {
+    width: 50px;
+    margin: 0 auto;
+    padding: 5px 10px 5px 10px;
+  }
 }
