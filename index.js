@@ -108,3 +108,28 @@ function showTempInfo(response) {
   let iconImage = document.getElementById("icon");
   iconImage.innerHTML = `<img src="${response.data.condition.icon_url}"/>`;
 }
+
+function displayForecast() {
+  let days = ["Tues", "Wed", "Thu", "Fri", "Sat"];
+  let forecastHTML = " ";
+
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="weather-forecast-day">
+            <div class="weather-forecast-date">${day}</div>
+            <div class="weather-forecast-icon">🌤️</div>
+            <div class="weather-forecast-temperatures">
+              <div class="weather-forecast-temperature">
+                <strong>15º</strong>
+              </div>
+              <div class="weather-forecast-temperature">9º</div>
+            </div>
+          </div>`;
+  });
+
+  let forcastElement = document.querySelector(".weather-forecast");
+  forcastElement.innerHTML = forecastHTML;
+}
+
+displayForecast();
