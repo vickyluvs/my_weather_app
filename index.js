@@ -62,14 +62,13 @@ function showTimeAndDate(date) {
   }
   return `${day} ${month} ${dateName} ${time} `;
 }
-function showCity() {
-  // let searchInput = document.getElementById("search-form-input");
-  // let city = searchInput.value;
+// make an api call and update the interface
+function searchCity(city) {
   const apiKey = "b348cf6o7e673bae03btfa66ccfde107";
   // weather api url
   const weatherUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
 
-  // calling showTemperature function
+  // calling showTemperature function and refresh weather
   axios.get(weatherUrl).then(showTempInfo);
 }
 //function to handle submit
@@ -77,13 +76,12 @@ function handleSearchSubmit(event) {
   event.preventDefault();
   let searchInput = document.getElementById("search-form-input");
 
-  let mainCityElement = document.getElementById("main-city");
-  mainCityElement.innerHTML = searchInput.value;
+  searchCity(searchInput.value);
 }
-
 // the form element
 let searchFormElement = document.getElementById("search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
+searchCity("Freetown");
 //function to display current weather temperature to user
 function showTempInfo(response) {
   // current weather
@@ -138,5 +136,4 @@ function displayForecast() {
   let forcastElement = document.querySelector(".weather-forecast");
   forcastElement.innerHTML = forecastHTML;
 }
-
 displayForecast();
