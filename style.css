@@ -48,7 +48,7 @@ input {
   background-color: #d8e6ff;
 }
 
-#search-bar {
+#search-form-input {
   padding: 5px 10px 5px 10px;
   border-radius: 5px;
   border: 0;
@@ -147,13 +147,13 @@ img {
 .weather-forecast {
   display: flex;
   justify-content: space-around;
-  margin-bottom: -10px;
+  margin-bottom: -20px;
   /* background-color: #807bf0; */
 }
 
 .weather-forecast-date {
   text-align: center;
-  color: rgba(67, 30, 229, 0.4);
+  color: #807bf0;
   font-size: 12px;
   /* line-height: 20px; */
   /* margin-bottom: 10px; */
@@ -179,7 +179,7 @@ img {
 footer {
   font-size: 6px;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 #attribute {
@@ -187,7 +187,7 @@ footer {
 }
 
 @media screen and (max-width: 400px) {
-  #search-bar {
+  #search-form-input {
     padding: 5px 10px 5px 10px;
     border-radius: 5px;
     border: 0;

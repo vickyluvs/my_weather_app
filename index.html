@@ -18,21 +18,20 @@
   <body>
     <main class="container">
       <div class="input_group">
-        <form>
+        <form class="search-form" id="search-form">
           <input
             type="text"
             class="search"
-            id="search-bar"
+            id="search-form-input"
             placeholder="Enter a city.. "
             required
             onfocus="this.value=''"
           />
           <input
-            type="button"
+            type="submit"
             id="search-btn"
             class="search-btn"
             value="Search"
-            onclick="showCity()"
           />
         </form>
       </div>

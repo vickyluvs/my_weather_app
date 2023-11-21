@@ -11,7 +11,7 @@ function showGreeting(response) {
   sentence.innerHTML = " ";
 
   //displaying the new greeting
-  sentence.innerHTML = `${greeting} means Hello in ${language} 👋🏽`;
+  sentence.innerHTML = `"${greeting}" means Hello in ${language} 👋🏽`;
 }
 // axios fetching the url and data
 let url = `https://www.greetingsapi.com/random`;
@@ -62,21 +62,28 @@ function showTimeAndDate(date) {
   }
   return `${day} ${month} ${dateName} ${time} `;
 }
-
-// function to capture user search value
 function showCity() {
-  // search input
-  let searchBox = document.getElementById("search-bar");
-  let city = searchBox.value;
-
-  let apiKey = `b348cf6o7e673bae03btfa66ccfde107`;
-  //weather api url
-  let weatherUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
+  // let searchInput = document.getElementById("search-form-input");
+  // let city = searchInput.value;
+  const apiKey = "b348cf6o7e673bae03btfa66ccfde107";
+  // weather api url
+  const weatherUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
 
   // calling showTemperature function
   axios.get(weatherUrl).then(showTempInfo);
 }
+//function to handle submit
+function handleSearchSubmit(event) {
+  event.preventDefault();
+  let searchInput = document.getElementById("search-form-input");
 
+  let mainCityElement = document.getElementById("main-city");
+  mainCityElement.innerHTML = searchInput.value;
+}
+
+// the form element
+let searchFormElement = document.getElementById("search-form");
+searchFormElement.addEventListener("submit", handleSearchSubmit);
 //function to display current weather temperature to user
 function showTempInfo(response) {
   // current weather
