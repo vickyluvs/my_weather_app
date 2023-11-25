@@ -9,8 +9,8 @@ body {
 /* main container */
 .container {
   margin: 50px auto;
-  max-width: 400px;
-  height: 40vh;
+  max-width: 350px;
+  height: 48vh;
   padding: 20px 20px 0 20px;
   background-color: rgb(142, 164, 231, 0.6);
   border: 5px solid rgb(107, 99, 255);
@@ -174,6 +174,7 @@ img {
   color: white;
   margin-top: 10px;
   display: flex;
+  font-size: 10px;
   justify-content: center;
 }
 
