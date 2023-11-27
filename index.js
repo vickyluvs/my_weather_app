@@ -112,9 +112,20 @@ function showTempInfo(response) {
 
   let iconImage = document.getElementById("icon");
   iconImage.innerHTML = `<img src="${response.data.condition.icon_url}"/>`;
+
+  getForecast(response.data.city);
 }
 
-function displayForecast() {
+function getForecast(city) {
+  let apiKey = "b348cf6o7e673bae03btfa66ccfde107";
+  // weather api url
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
+
+  // calling showTemperature function and refresh weather
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
   let days = ["Tues", "Wed", "Thu", "Fri", "Sat"];
   let forecastHTML = " ";
 
@@ -128,7 +139,7 @@ function displayForecast() {
               <div class="weather-forecast-temperature">
                 <strong>15º</strong>
               </div>
-              <div class="weather-forecast-temperature">9º</div>
+              <div class="weather-forecast-temperature min">9º</div>
             </div>
           </div>`;
   });
