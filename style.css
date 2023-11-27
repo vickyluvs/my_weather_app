@@ -180,6 +180,11 @@ img {
   cursor: default;
 }
 
+.forecast-description {
+  font-size: 10px;
+  text-align: center;
+}
+
 div.min {
   opacity: 0.6;
 }
