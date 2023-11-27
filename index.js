@@ -125,6 +125,13 @@ function getForecast(city) {
   axios.get(apiUrl).then(displayForecast);
 }
 
+function getForecastDay(timespan) {
+  let date = new Date(timespan * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[date.getDay()];
+}
+
 function displayForecast(response) {
   let forecastHTML = " ";
   response.data.daily.forEach(function (day, index) {
@@ -132,7 +139,7 @@ function displayForecast(response) {
       forecastHTML =
         forecastHTML +
         `<div class="weather-forecast-day">
-            <div class="weather-forecast-date">Tues</div>
+            <div class="weather-forecast-date">${getForecastDay(day.time)}</div>
              <img src="${
                day.condition.icon_url
              }" class="weather-forecast-icon"/>
